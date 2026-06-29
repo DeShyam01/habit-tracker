@@ -64,14 +64,6 @@ const Dashboard = () => {
     setIsModalOpen(false);
   };
 
-  const handlePomodoroComplete = (habitId, minutes) => {
-    persistHabits(habitList.map((habit) => (
-      habit.id === habitId
-        ? { ...habit, pomodoroMinutes: habit.pomodoroMinutes + minutes }
-        : habit
-    )));
-  };
-
   const stats = getAllStats(habitList);
 
   return (
@@ -152,7 +144,7 @@ const Dashboard = () => {
         />
 
         {habitList.length > 0 && (
-          <PomodoroTimer habits={habitList} onSessionComplete={handlePomodoroComplete} />
+          <PomodoroTimer habits={habitList} />
         )}
 
         <section className="habit-list">

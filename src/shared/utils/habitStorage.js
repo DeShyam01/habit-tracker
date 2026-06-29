@@ -48,7 +48,6 @@ export const normalizeHabit = (habit) => {
     description: habit.description || '',
     color: habit.color || getCategoryColor(habit.category || 'Custom'),
     checkIns: [...new Set(checkIns)].sort(),
-    pomodoroMinutes: Number(habit.pomodoroMinutes || 0),
     createdAt: habit.createdAt || new Date().toISOString(),
   };
 };

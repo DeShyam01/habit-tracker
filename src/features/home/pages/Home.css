@@ -86,26 +86,61 @@
 
 .global-stat {
   width: fit-content;
-  min-width: 240px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 16px 18px;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  min-width: 265px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: linear-gradient(135deg, #f4f0ff 0%, #f2f1ff 55%, #f8f4ff 100%);
+  border: 1px solid rgba(124, 92, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 24px;
+  box-shadow: 0 12px 28px rgba(99, 102, 241, 0.08);
   animation: statPulse 2.4s ease-in-out infinite;
 }
 
-.global-stat span {
-  display: block;
-  font-size: 2.2rem;
-  font-weight: 850;
-  color: #0f172a;
+.streak-icon {
+  width: 74px;
+  height: 74px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #855cff 0%, #5d49e8 100%);
+  box-shadow: 0 12px 22px rgba(93, 73, 232, 0.28);
 }
 
-.global-stat p {
-  color: #64748b;
-  font-weight: 600;
+.streak-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  min-width: 92px;
+}
+
+.streak-label {
+  color: #111827;
+  font-size: 12px;
+  font-weight: 800;
   margin: 0;
+}
+
+.streak-copy strong {
+  color: #6d4cff;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.streak-copy span {
+  color: #334155;
+  font-size: 14px;
+}
+
+.streak-message {
+  color: #6d4cff;
+  font-size: 13px;
+  font-weight: 800;
+  margin: 8px 0 0;
 }
 
 .action-container {
@@ -198,11 +233,11 @@
 @keyframes statPulse {
   0%, 100% {
     transform: translateY(0);
-    border-color: #e2e8f0;
+    border-color: rgba(124, 92, 255, 0.08);
   }
   50% {
     transform: translateY(-4px);
-    border-color: #818cf8;
+    border-color: rgba(124, 92, 255, 0.32);
   }
 }
 

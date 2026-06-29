@@ -1,21 +1,16 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from '../../../shared/components/Button';
 import './PomodoroTimer.css';
 
 const WORK_SECONDS = 25 * 60;
 const BREAK_SECONDS = 5 * 60;
 
-const PomodoroTimer = ({ habits, onSessionComplete }) => {
+const PomodoroTimer = ({ habits }) => {
   const [selectedHabitId, setSelectedHabitId] = useState(habits[0]?.id || '');
   const [mode, setMode] = useState('work');
   const [secondsLeft, setSecondsLeft] = useState(WORK_SECONDS);
   const [isRunning, setIsRunning] = useState(false);
   const activeHabitId = selectedHabitId || habits[0]?.id || '';
-
-  const selectedHabit = useMemo(
-    () => habits.find((habit) => habit.id === activeHabitId),
-    [habits, activeHabitId],
-  );
 
   useEffect(() => {
     if (!isRunning) return undefined;
@@ -23,7 +18,6 @@ const PomodoroTimer = ({ habits, onSessionComplete }) => {
       setSecondsLeft((current) => {
         if (current > 1) return current - 1;
         setIsRunning(false);
-        if (mode === 'work' && selectedHabit) onSessionComplete(selectedHabit.id, 25);
         const nextMode = mode === 'work' ? 'break' : 'work';
         setMode(nextMode);
         return nextMode === 'work' ? WORK_SECONDS : BREAK_SECONDS;
@@ -31,7 +25,7 @@ const PomodoroTimer = ({ habits, onSessionComplete }) => {
     }, 1000);
 
     return () => clearInterval(timerId);
-  }, [isRunning, mode, onSessionComplete, selectedHabit]);
+  }, [isRunning, mode]);
 
   const minutes = String(Math.floor(secondsLeft / 60)).padStart(2, '0');
   const seconds = String(secondsLeft % 60).padStart(2, '0');

@@ -42,8 +42,15 @@ const Home = () => {
           </p>
 
           <div className="global-stat">
-            <span>{stats.totalCheckIns}</span>
-            <p>Total check-ins logged across all habits</p>
+            <div className="streak-icon">
+              <Flame size={28} fill="#ffffff" color="#ffffff" />
+            </div>
+            <div className="streak-copy">
+              <p className="streak-label">Current Streak</p>
+              <strong>{stats.currentStreak}</strong>
+              <span>days</span>
+              <p className="streak-message">Keep it going!</p>
+            </div>
           </div>
 
           <div className="action-container">

@@ -36,13 +36,6 @@ const HabitCard = ({ habit, onToggle, onEdit, onDelete }) => {
             </div>
             <span className="stat-label">Longest Streak</span>
           </div>
-          <div className="stat-divider"></div>
-          <div className="stat-item">
-            <div className="stat-value-container">
-              <span className="stat-number">{habit.pomodoroMinutes}</span>
-            </div>
-            <span className="stat-label">Focus Minutes</span>
-          </div>
         </div>
       </div>
 
