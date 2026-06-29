@@ -1,0 +1,246 @@
+.home-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #FAFAFD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 40px 24px;
+}
+
+.home-layout {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E4E4E7;
+  padding: 6px 14px 6px 6px;
+  border-radius: 9999px;
+  width: fit-content;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+.pill-icon {
+  background: #6366F1;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+.pill-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4F46E5;
+}
+
+.pill-muted {
+  color: #71717A;
+  font-weight: 400;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 850;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #0F172A;
+}
+
+.highlight-gradient {
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #64748B;
+  max-width: 480px;
+}
+
+.global-stat {
+  width: fit-content;
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  animation: statPulse 2.4s ease-in-out infinite;
+}
+
+.global-stat span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 850;
+  color: #0f172a;
+}
+
+.global-stat p {
+  color: #64748b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.action-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #6366F1;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #4F46E5;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -3px rgba(79, 70, 229, 0.4);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-arrow {
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.safety-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #64748B;
+}
+
+.check-shield {
+  width: 20px;
+  height: 20px;
+  background: #EEF2FF;
+  color: #6366F1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-showcase {
+  width: 100%;
+  height: 100%;
+}
+
+.right-showcase img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes statPulse {
+  0%, 100% {
+    transform: translateY(0);
+    border-color: #e2e8f0;
+  }
+  50% {
+    transform: translateY(-4px);
+    border-color: #818cf8;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .left-hero {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto;
+  }
+
+  .action-container {
+    justify-content: center;
+  }
+
+  .global-stat {
+    margin: 0 auto;
+  }
+
+  .right-showcase {
+    margin-top: 20px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    padding: 96px 16px 40px 16px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}

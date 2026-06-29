@@ -1,0 +1,36 @@
+.not-found-page {
+  min-height: 100vh;
+  padding: 96px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.not-found-page h2 {
+  font-size: 36px;
+  color: #0f172a;
+}
+
+.not-found-page p {
+  color: #64748b;
+  margin: 8px 0 18px;
+}
+
+.not-found-page a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .not-found-page {
+    padding: 92px 16px 28px;
+  }
+}

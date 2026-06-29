@@ -1,0 +1,62 @@
+.consistency-section {
+  margin-top: 24px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.category-filter {
+  height: 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #ffffff;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(15, minmax(18px, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.heatmap-cell {
+  position: relative;
+  aspect-ratio: 1;
+  min-width: 18px;
+  border-radius: 5px;
+  background: #eef2ff;
+  border: 1px solid #e0e7ff;
+}
+
+.level-1 { background: #c7d2fe; }
+.level-2 { background: #818cf8; }
+.level-3 { background: #4f46e5; }
+.level-4 { background: #312e81; }
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  background: #111827;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.heatmap-cell:hover .tooltip {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .heatmap-grid {
+    grid-template-columns: repeat(10, minmax(18px, 1fr));
+  }
+}

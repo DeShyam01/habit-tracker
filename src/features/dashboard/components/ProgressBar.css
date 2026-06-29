@@ -1,0 +1,42 @@
+.progress-card{
+    background-color: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.progress-bar-container{
+    background-color: var(--secondary);
+    flex: 1;
+    height: 28px;
+    border-radius: 50px;
+}
+
+.progress-bar-fill{
+    background-color: var(--primary);
+    border-radius: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+    color: var(--primary-foreground);
+    min-width: 0;
+    transition: width 0.45s ease;
+}
+
+@media (max-width: 768px) {
+    .progress-card{
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
+
+    .progress-bar-container{
+        width: 100%;
+    }
+}
