@@ -26,6 +26,10 @@ This project was built as part of the Kshitij Web Development and AI Workshop 20
 - Reusable utility layer for streaks and statistics
 - Built-in Pomodoro timer and streak freeze system
 
+## Demo
+
+![habit-tracker-demo](./assets/habit-tracker-demo.gif)
+
 ## Features
 
 ### Navigation & Home
@@ -98,6 +102,22 @@ This project was built as part of the Kshitij Web Development and AI Workshop 20
 
 - ESLint
 - npm
+
+## Live Demo
+
+Live Application Link: [https://habit-tracker-sepia-eight.vercel.app/](https://habit-tracker-sepia-eight.vercel.app/)
+
+## Screenshots
+
+|Description                                       |Image                                                                                        |
+|--------------------------------------------------|---------------------------------------------------------------------------------------------|
+|Home Page                                         | ![Home Page](./assets/habit-tracker-landing-page.png)                                       |
+|Dashboard Page with Pomodoro Timer and Habit Lists| ![Dashboard Page with Pomodoro Timer and Habit Lists](./assets/habit-tracker-dashboard.png) |
+|Dashboard Page With Consistency grid              | ![Dashboard Page With Consistency grid](./assets/habit-tracker-dashboard-2.png)             |
+|Add Habit Modal                                   | ![Add Habit Modal](./assets/habit-tracker-add-habit-modal.png)                              |
+|Insights Page                                     | ![Insights Page](./assets/habit-tracker-insights.png)                                       |
+|About Page                                        | ![About Page](./assets/habit-tracker-about.png)                                             |
+
 
 ## Installation
 
